@@ -13,6 +13,10 @@
 node_modules
 jspm_packages
 
+# build
+.build
+.esbuild
+
 # Serverless directories
 .serverless
 
@@ -28,3 +32,6 @@ jspm_packages
 # .env
 *.env
 !.env.example
+
+# eslint
+.eslintcache

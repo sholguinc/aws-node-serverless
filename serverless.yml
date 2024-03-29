@@ -8,22 +8,25 @@ useDotenv: true
 provider:
   name: aws
   runtime: nodejs18.x
+#  stage: dev
 #  profile: some-profile
 #  region: us-east-1
   apiGateway:
     shouldStartNameWithService: true
 
 plugins:
+  - serverless-esbuild
   - serverless-offline
 
 custom:
+  esbuild:
+    bundle: true
+    minify: true
   serverless-offline:
     httpPort: ${env:SERVERLESS_OFFLINE_PORT, 3000}
 
 functions:
   health:
-    handler: index.health
+    handler: src/main.health
     events:
-      - httpApi:
-          method: get
-          path: /health
+      - httpApi: GET /health
