@@ -1,0 +1,17 @@
+{
+  "name": "aws-node-http-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "packageManager": "yarn@4.1.1",
+  "scripts": {
+    "dev": "serverless offline",
+    "project-version": "echo $npm_package_version"
+  },
+  "dependencies": {
+    "serverless": "^3.38.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^13.3.3"
+  }
+}

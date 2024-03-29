@@ -1,0 +1,29 @@
+org: sholguinc
+app: aws-node-http-project
+service: aws-node-http-project
+frameworkVersion: '3'
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+#  profile: some-profile
+#  region: us-east-1
+  apiGateway:
+    shouldStartNameWithService: true
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: ${env:SERVERLESS_OFFLINE_PORT, 3000}
+
+functions:
+  health:
+    handler: index.health
+    events:
+      - httpApi:
+          method: get
+          path: /health
