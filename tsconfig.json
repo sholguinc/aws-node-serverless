@@ -1,20 +1,14 @@
 {
   "compilerOptions": {
-    "lib": ["ES2022"],
-    "module": "ES2022",
-    "moduleResolution": "Bundler",
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "target": "ES2022",
+    "target": "ESNEXT",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "preserveConstEnums": true,
-    "strictNullChecks": true,
-    "rootDir": "./",
-    "baseUrl": "src",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
   },
   "include": ["src"],
-  "exclude": ["node_modules", ".build", ".esbuild"]
+  "exclude": ["node_modules", "dist"]
 }

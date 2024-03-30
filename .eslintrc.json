@@ -22,13 +22,18 @@
   "rules": {
     "@typescript-eslint/triple-slash-reference": "off",
     "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/prefer-ts-expect-error": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-misused-promises": "off",
     "prettier/prettier": [
       "error"
     ]
   },
   "ignorePatterns": [
-    ".build",
-    ".esbuild",
+    "dist",
     ".eslintrc.json"
   ]
 }

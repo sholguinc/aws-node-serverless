@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - './db:/var/lib/mysql'
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - 3306:${MYSQL_PORT:-3306}
+    expose:
+      - ${MYSQL_PORT:-3306}
+    container_name:
+      aws-node-mysql

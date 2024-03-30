@@ -1,15 +1,19 @@
-import { type APIGatewayProxyHandler } from 'aws-lambda';
+import express from 'express';
+import serverless from 'serverless-http';
+import * as bodyParser from 'body-parser';
 
-export const health: APIGatewayProxyHandler = async (event) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify(
-      {
-        message: 'Go Serverless v3.0! Your function executed successfully!',
-        input: event,
-      },
-      null,
-      2,
-    ),
-  };
-};
+import IndexRouter from './routes/index.routes';
+import SwapiRouter from './routes/swapi.routes';
+
+// App
+const app = express();
+
+// Middlewares
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Routes
+app.use(IndexRouter);
+app.use('/swapi', SwapiRouter);
+
+export const handler = serverless(app as serverless.Application);

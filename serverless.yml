@@ -11,11 +11,11 @@ provider:
 #  stage: dev
 #  profile: some-profile
 #  region: us-east-1
+  timeout: 30
   apiGateway:
     shouldStartNameWithService: true
 
 plugins:
-  - serverless-esbuild
   - serverless-offline
 
 custom:
@@ -26,7 +26,7 @@ custom:
     httpPort: ${env:SERVERLESS_OFFLINE_PORT, 3000}
 
 functions:
-  health:
-    handler: src/main.health
+  api:
+    handler: dist/main.handler
     events:
-      - httpApi: GET /health
+      - httpApi: '*'
