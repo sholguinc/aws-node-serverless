@@ -23,7 +23,7 @@ custom:
     bundle: true
     minify: true
   serverless-offline:
-    httpPort: ${env:SERVERLESS_OFFLINE_PORT, 3000}
+    httpPort: ${env:SERVERLESS_OFFLINE_PORT, 4000}
 
 functions:
   api:

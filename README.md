@@ -18,6 +18,13 @@ This template does not include any kind of persistence (database). For more adva
 
 ## Usage
 
+## Prerequisites
+
+```
+- Node
+- Docker
+```
+
 ### Environment Variables
 
 ```dotenv

@@ -11,10 +11,6 @@ export const createBookValidator = async (
   next: NextFunction,
 ) => {
   try {
-    if (Object.keys(req.body).length === 0) {
-      return res.status(400).send({ message: 'Missing request body!' });
-    }
-
     const book = new CreateBookDto();
     book.name = req.body.name;
     book.author = req.body.author;
