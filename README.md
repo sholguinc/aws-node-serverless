@@ -89,9 +89,7 @@ Which should result in response similar to the following (removed `input` conten
 ```json
 {
   "message": "Go Serverless v2.0! Your function executed successfully!",
-  "input": {
-    ...
-  }
+  "input": "..."
 }
 ```
 
@@ -99,7 +97,7 @@ Which should result in response similar to the following (removed `input` conten
 
 Endpoints are available in `insomnia.json` file in root.
 
-```json
+```
 > Health endpoint
 > Swapi endpoints
   - Get people
