@@ -1,0 +1,315 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-03-31T01:31:14.356Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_685f7a88f7704179b1a1b5848f50079f",
+      "parentId": "wrk_737cff73dbb04d2eb23237c8d82ea819",
+      "modified": 1711743885185,
+      "created": 1711680235387,
+      "url": "{{ _.base_url }}/health",
+      "name": "Health",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1703278534448,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_737cff73dbb04d2eb23237c8d82ea819",
+      "parentId": null,
+      "modified": 1711680235281,
+      "created": 1711680235281,
+      "name": "serverless-test",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_7ea1b53493ed48839c3a1dc00805c937",
+      "parentId": "fld_e4cfbd27cad841b0b4cef7556ca4cfb0",
+      "modified": 1711844386400,
+      "created": 1711753458798,
+      "url": "{{ _.base_url }}/swapi/people",
+      "name": "People",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1711844380402,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e4cfbd27cad841b0b4cef7556ca4cfb0",
+      "parentId": "wrk_737cff73dbb04d2eb23237c8d82ea819",
+      "modified": 1711844368811,
+      "created": 1711844366402,
+      "name": "Swapi",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1703278534398,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_80acd7e1a2694a9aba353e09b2fe7ca4",
+      "parentId": "fld_e4cfbd27cad841b0b4cef7556ca4cfb0",
+      "modified": 1711844395399,
+      "created": 1711755409711,
+      "url": "{{ _.base_url }}/swapi/people/2",
+      "name": "Find People",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1711844380377,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_da5aacb9b1b949408098b703dce3d5ae",
+      "parentId": "fld_e4cfbd27cad841b0b4cef7556ca4cfb0",
+      "modified": 1711844393840,
+      "created": 1711755421704,
+      "url": "{{ _.base_url }}/swapi/people/schema",
+      "name": "People Schema",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1711844380352,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a6fb415d21864ac6b170b8fc42dae52d",
+      "parentId": "fld_0994a13eaa534eacbbf14584e97841d2",
+      "modified": 1711845103200,
+      "created": 1711844401260,
+      "url": "{{ _.base_url }}/books",
+      "name": "Get Books",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1711844380402,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0994a13eaa534eacbbf14584e97841d2",
+      "parentId": "wrk_737cff73dbb04d2eb23237c8d82ea819",
+      "modified": 1711844416307,
+      "created": 1711844401256,
+      "name": "Books",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1703278534385.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_9a910916c0d54122b73df1101795dc39",
+      "parentId": "fld_0994a13eaa534eacbbf14584e97841d2",
+      "modified": 1711848238746,
+      "created": 1711844401272,
+      "url": "{{ _.base_url }}/books/1",
+      "name": "Get Book",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1711844380377,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8239bbddc0e643db9b90f00b32e8856a",
+      "parentId": "fld_0994a13eaa534eacbbf14584e97841d2",
+      "modified": 1711848224140,
+      "created": 1711845107849,
+      "url": "{{ _.base_url }}/books",
+      "name": "Create Book",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Milibro\",\n\t\"author\": \"Me\",\n\t\"description\": \"something about to say\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1710756852025,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_9c6e917fe21c424dbf48d837a4b71756",
+      "parentId": "wrk_737cff73dbb04d2eb23237c8d82ea819",
+      "modified": 1711680235285,
+      "created": 1711680235285,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1703278363855,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_60d4de4e4fea4218aca751bdefc57ad5",
+      "parentId": "wrk_737cff73dbb04d2eb23237c8d82ea819",
+      "modified": 1711680235301,
+      "created": 1711680235301,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_003949ad74364477899c32278e309f25",
+      "parentId": "wrk_737cff73dbb04d2eb23237c8d82ea819",
+      "modified": 1711680235413,
+      "created": 1711680235412,
+      "fileName": "serverless-test",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_c8b2f5207dbf407fa60b28225f45e379",
+      "parentId": "env_9c6e917fe21c424dbf48d837a4b71756",
+      "modified": 1711743846732,
+      "created": 1711680235286,
+      "name": "Local",
+      "data": {
+        "base_url": "http://127.0.0.1:3000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": "#18e22f",
+      "isPrivate": false,
+      "metaSortKey": 1704241672299,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_96a363cc57134e25875d93ec76f9c104",
+      "parentId": "env_9c6e917fe21c424dbf48d837a4b71756",
+      "modified": 1711743855730,
+      "created": 1711691343917,
+      "name": "Serverless Offline",
+      "data": {
+        "base_url": "http://127.0.0.1:4000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": "#294cff",
+      "isPrivate": false,
+      "metaSortKey": 1704241676048,
+      "_type": "environment"
+    }
+  ]
+}

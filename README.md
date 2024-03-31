@@ -1,6 +1,6 @@
 <!--
-title: 'AWS Simple HTTP Endpoint example in NodeJS'
-description: 'This template demonstrates how to make a simple HTTP API with Node.js running on AWS Lambda and API Gateway using the Serverless Framework.'
+title: 'AWS HTTP Endpoint example in NodeJS'
+description: 'This template shows an HTTP API with Node.js running on AWS Lambda and API Gateway using the Serverless Framework.'
 layout: Doc
 framework: v3
 platform: AWS
@@ -18,10 +18,48 @@ This template does not include any kind of persistence (database). For more adva
 
 ## Usage
 
+### Environment Variables
+
+```dotenv
+# serverless config
+SERVERLESS_OFFLINE_PORT=
+
+# db config
+MYSQL_DATABASE=
+MYSQL_ROOT_PASSWORD=
+MYSQL_HOST=
+MYSQL_PORT=
+```
+
+### Offline Mode
+
+```
+# Install dependencies
+yarn install 
+
+# Create the build of project
+yarn build
+
+# Create local database with docker
+yarn db:up
+
+# Run migrations
+yarn migration:run
+
+# Deploy local serverless offline
+yarn offline
+```
+
 ### Deployment
 
 ```
-$ serverless deploy
+# Set serverless vars
+stage: <some-stage>
+profile: <some-profile>
+region: <some-region>
+
+# Deploy
+$ yarn deploy
 ```
 
 After deploying, you should see output similar to:
@@ -57,36 +95,18 @@ Which should result in response similar to the following (removed `input` conten
 }
 ```
 
-### Local development
+## Documentation
 
-You can invoke your function locally by using the following command:
+Endpoints are available in `insomnia.json` file in root.
 
-```bash
-serverless invoke local --function hello
+```json
+> Health endpoint
+> Swapi endpoints
+  - Get people
+  - Get person
+  - Get person schema
+> Book endpoints
+  - Get books
+  - Get book
+  - Post book
 ```
-
-Which should result in response similar to the following:
-
-```
-{
-  "statusCode": 200,
-  "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": \"\"\n}"
-}
-```
-
-
-Alternatively, it is also possible to emulate API Gateway and Lambda locally by using `serverless-offline` plugin. In order to do that, execute the following command:
-
-```bash
-serverless plugin install -n serverless-offline
-```
-
-It will add the `serverless-offline` plugin to `devDependencies` in `package.json` file as well as will add it to `plugins` in `serverless.yml`.
-
-After installation, you can start local emulation with:
-
-```
-serverless offline
-```
-
-To learn more about the capabilities of `serverless-offline`, please refer to its [GitHub repository](https://github.com/dherault/serverless-offline).
